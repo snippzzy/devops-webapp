@@ -46,8 +46,8 @@ echo run parallel!!'''
       steps {
         sh '''pwd
 cd ./docker
-docker build -t devops/webapp1-2022:$BUILD_ID .
-docker tag devops/webapp1-2022:$BUILD_ID devops/webapp1-2022:latest 
+docker build -t ogalandlord/webapp1-2022:$BUILD_ID .
+docker tag ogalandlord/webapp1-2022:$BUILD_ID ogalandlord/webapp1-2022-2022:latest 
 docker images'''
       }
     }
@@ -58,8 +58,8 @@ docker images'''
           withCredentials([usernamePassword(credentialsId: 'ca-dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
             sh '''
 docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-docker push devops/webapp1-2019:$BUILD_ID
-docker push devops/webapp1-2019:latest
+docker push ogalandlord/webapp1-2022:$BUILD_ID
+docker push ogalandlord/webapp1-2022:latest
 '''
           }
         }
