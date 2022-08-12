@@ -47,7 +47,7 @@ echo run parallel!!'''
         sh '''pwd
 cd ./docker
 docker build -t ogalandlord/webapp1-2022:$BUILD_ID .
-docker tag ogalandlord/webapp1-2022:$BUILD_ID ogalandlord/webapp1-2022-2022:latest 
+docker tag ogalandlord/webapp1-2022:$BUILD_ID ogalandlord/webapp1-2022:latest 
 docker images'''
       }
     }
