@@ -25,7 +25,7 @@ ls -la
 
     stage('Publish') {
       steps {
-        archiveArtifacts(artifacts: 'build/libs/*.var', fingerprint: true, onlyIfSuccessful: true)
+        archiveArtifacts(artifacts: 'build/libs/*.war', fingerprint: true, onlyIfSuccessful: true)
       }
     }
 
