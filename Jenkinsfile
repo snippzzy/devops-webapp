@@ -20,7 +20,7 @@ pipeline {
 pwd
 ./gradlew build -PwarName=$RELEASE --info
 ls -la build/libs/
-cp ./build/libs/$RELEASE ./docker'''
+cp ./build/libs/devops-webapp_master-1.0.war ./docker'''
           }
         }
 
