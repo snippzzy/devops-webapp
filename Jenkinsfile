@@ -58,8 +58,8 @@ docker images'''
           withCredentials([usernamePassword(credentialsId: 'ca-dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
             sh '''
 docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-docker push devops/webapp1-2022:$BUILD_ID
-docker push devops/webapp1-2022:latest
+docker push devops/webapp1-2019:$BUILD_ID
+docker push devops/webapp1-2019:latest
 '''
           }
         }
